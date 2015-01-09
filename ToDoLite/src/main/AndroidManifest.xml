@@ -6,6 +6,8 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="com.couchbase.todolite.Application"
         android:allowBackup="true"
@@ -30,6 +32,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
         <activity android:name="com.couchbase.todolite.ImageViewActivity" />
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="777ded422d343e33f5361f098e867f07dde3bde8"/>
     </application>
 
 </manifest>

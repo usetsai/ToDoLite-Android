@@ -21,6 +21,9 @@ import com.couchbase.lite.auth.AuthenticatorFactory;
 import com.couchbase.lite.replicator.Replication;
 import com.couchbase.lite.util.Log;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
+
 import org.apache.http.client.HttpResponseException;
 
 import java.io.IOException;
@@ -288,6 +291,7 @@ public class Application extends android.app.Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
 
         Log.d(Application.TAG, "Application State: onCreate()");
 
